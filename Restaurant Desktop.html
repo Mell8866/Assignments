@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<title>Restaurant Desktop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Aachen Std Bold", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://cdn.livekindly.co/wp-content/uploads/2019/01/livekindly-papa-johns-uk-vegan-1-1068x601.jpg");
+  min-height: 100%;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-green w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">HOME</a>
+    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#googleMap" class="w3-bar-item w3-button">CONTACT</a>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge w3-red">Open from 10AM to 12AM</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">Papa<br>John</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>Papa<br>John</b></span>
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-red">Let me see the menu</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="w3-container  w3-hover-red w3-green w3-normal w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Deserts</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Starter</div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Pepperoni</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.50</span></h1><img src="https://www.papajohns.com/assets/img/pizzas/std_double_pep-compressed.jpg">
+      <p class="w3-text-grey">Your choice of crust covered with our signature pizza sauce, real cheese made from mozzarella and premium pepperoni. With a pepperoni in almost every bite, it’s one of our most popular pizzas.</p>
+      <hr>
+   
+      <h1><b>Sausage</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15.50</span></h1><img src="https://www.papajohns.com/assets/img/pizzas/std_1topSausage-compressed.jpg">
+      <p class="w3-text-grey">Our signature pizza sauce layered with sausage and real cheese made from mozzarella for a taste you’ll crave. Your choice of crust.</p>
+      <hr>
+      
+      <h1><b>Cheese Pizza</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$17.00</span></h1><img src="https://www.papajohns.com/assets/img/pizzas/std_1topCheese_m-compressed.jpg">
+      <p class="w3-text-grey">Simple, yet simply delicious. Real cheese made from mozzarella on top of our signature pizza sauce with your choice of crust, then baked to a golden brown. It has just what you want, and nothing you don’t.</p>
+      <hr>
+
+      <h1><b>Garden Fresh with Garlic Parmesan Crust</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16.50</span></h1><img src="https://www.papajohns.com/assets/img/pizzas/sma_GardenFresh-compressed.jpg">
+      <p class="w3-text-grey">All your favorite veggies together on a delightfully delicious pizza. Loaded with crisp green peppers, fresh-sliced onions, Crimini mushrooms, ripe black olives and vine-ripened Roma tomatoes. Lovingly prepared and delivered hot from our oven to your home.</p>
+      <hr>
+
+      <h1><b>Spicy Italian</b> <span class="w3-tag w3-red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">$20.00</span></h1><img src="https://www.papajohns.com/assets/img/pizzas/sma_SpicyItalian_m-compressed.jpg">
+      <p class="w3-text-grey">Our Spicy Italian pizza boasts pepperoni and a double portion of spicy Italian sausage for a bold flavor then covered with real cheese made from mozzarella.</p>
+      <hr>
+
+      <h1><b>Spinach Alfredo</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">$21.50</span></h1><img src="https://www.papajohns.com/assets/img/pizzas/std_SpinAlf-compressed.jpg">
+      <p class="w3-text-grey">Delicious doesn’t have to be complicated. This irresistible pizza has a rich and creamy blend of spinach and garlic Parmesan Alfredo sauce then covered with real cheese made from mozzarella.</p>
+    </div>
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Cinnamon Pull Aparts</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1><img src="https://www.veganfoodandliving.com/wp-content/uploads/2019/09/8db2cee9-f357-4e06-a394-e77b99dc8ccb.png">
+      <p class="w3-text-grey">Bite-sized sweet roll pieces covered in cinnamon and sugar, topped with cinnamon crumbles then baked to a gooey goodness and drizzled with sweet cream cheese icing.</p>
+      <hr>
+   
+      <h1><b>Chocolate Chip Cookie</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></h1><img src="https://www.papajohns.com/assets/img/company/ingredients/chocolate-chip-cookie.jpg">
+      <p class="w3-text-grey">Save room for dessert. Papa’s family-size Chocolate Chip Cookie is baked fresh, cut into 8 slices and served warm.</p>
+      <hr>
+      
+      <h1><b>Double Chocolate Chip Brownie</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.00</span></h1><img src="https://www.papajohns.com/assets/img/company/ingredients/double-chocolate-chip-brownie.jpg">
+      <p class="w3-text-grey">A decadent delight for chocolate lovers. This cakey on the outside, fudgy in the middle brownie is filled with rich chocolate chips, baked fresh and cut into nine squares, then served warm.</p>
+
+    </div>
+
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Spicy Buffalo Wings</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1><img src="http://www.papajohnsguam.com/wp-content/uploads/2017/01/PJ-Sides-Chic-Wings.jpg">
+      <p class="w3-text-grey">Our made-to-order, bone-in wings are oven-baked to a golden crisp, and then drizzled in our hot and spicy buffalo sauce for a zip of heat! Your choice of dipping sauce included.</p>
+      <hr>
+   
+      <h1><b>BBQ Wings</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1><img src="https://dynl.mktgcdn.com/p/byq7KL2REvvSozAkNNLpd3x77ipgt9jxjuec4St1KMc/600x435.jpg">
+      <p class="w3-text-grey">We never just wing it with Papa John's BBQ wings. Our made-to-order, bone-in wings are oven-baked and covered in a thick and bold smokehouse-style BBQ sauce. Includes your choice of dipping sauce..</p>
+      <hr>
+      
+      <h1><b>New Chicken Poppers</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1><img src="https://dynl.mktgcdn.com/p/2_QkX5Cjg_55vdJ7wdgPpCwzWP8bPbqjICsIHSNhF8A/600x435.jpg">
+      <p class="w3-text-grey">Larger size! All-white chicken breast pieces breaded and oven-baked.</p>
+      <hr>
+      
+      <h1><b>Garlic Knots</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1><img src="https://i.pinimg.com/originals/ee/c0/3d/eec03de61cec60a4b897bad922c3522b.jpg">
+      <p class="w3-text-grey">Our new Garlic Knots made with fresh-baked dough and garlic parmesan seasoning. Eight Garlic Knots are served with pizza sauce for dipping.</p>
+
+      <h1><b>Breadsticks</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1><img src="https://www.papajohns.com/assets/img/company/ingredients/breadsticks.jpg">
+      <p class="w3-text-grey">You can’t live by bread alone. On the other hand, some can’t live without our breadsticks. Fresh dough baked to a golden brown. Served with pizza sauce for dipping.</p>
+
+      <h1><b>Bruschetta Cheesesticks</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1><img src="https://i0.wp.com/www.eatthis.com/wp-content/uploads/2019/05/papa-johns-bruchetta-cheesesticks.jpg?resize=500%2C366&ssl=1">
+      <p class="w3-text-grey">Original fresh dough topped with fresh Roma tomatoes, real cheese made from mozzarella, and Special Garlic and basil pesto sauces, then baked to a light golden brown. Served with pizza sauce for dipping.</p>
+
+    </div><br>
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-hover-green w3-red w3-normal w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+    <p>Papa Johns is an American pizza restaurant franchise. It runs the fourth largest pizza delivery restaurant chain in the United States, with headquarters in Jeffersontown, Kentucky, a suburb of Louisville.</p>
+    <p><strong>The Chef?</strong> John Schnatter<img src="https://i.dailymail.co.uk/i/pix/2015/07/08/11/2A54CBC800000578-3153322-image-m-7_1436351085584.jpg" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0b/24/2c/4f/papa-john-s.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
+    <h1><b>Opening Hours</b></h1>
+    
+    <div class="w3-row">
+      <div class="w3-col s6">
+        <p>Mon & Tue 10:00AM-12:30AM</p>
+        <p>Wednesday 10:00AM-12:30AM</p>
+        <p>Thursday 10:00AM-12:30AM</p>
+      </div>
+      <div class="w3-col s6">
+        <p>Friday 10:00AM-1:30AM</p>
+        <p>Saturday 10:00AM-1:00AM</p>
+        <p>Sunday Closed</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="https://mk0restaurantsngtue6.kinstacdn.com/wp-content/uploads/2016/04/Papa-Johns-Pizza-Locations-Near-Me-Google-Maps.jpg" class="w3-image w3-normal" style="width:100%;">
+
+<!-- Contact -->
+<div id="googleMap" class="w3-container w3-padding-64  w3-hover-white w3-black w3-normal w3-xlarge">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contact</h1>
+    <p>Find us at anywhere at most place or call us at 1 (877) 547-7272</p>
+    <p><span class="w3-tag">Great News!</span> Order now and get 25% off Order Now! your regular menu price order at papajohns.com.</p>
+    <p class="w3-xxlarge"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2019-11-19T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

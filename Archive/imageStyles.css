@@ -1,0 +1,48 @@
+#image01{
+	width:360px;
+    border: 8px dashed #f59e42;
+}
+#redtext{
+	font-size:1em;
+    color: red;
+    font-family: Times New Roman
+}
+
+#image02{
+	width:560px;
+    border: 8px dotted #4298f5;
+}
+#orangetext{
+	font-size:1em;
+    color: orange;
+    font-family: Times New Roman
+}
+
+#image03{
+	width:560px;
+    border: 8px double #875b1a;
+}
+#blacktext{
+	font-size:1em;
+    color: black;
+    font-family: Times New Roman
+}
+
+#image04{
+	width:560px;
+    border: 8px ridge #f5d142;
+}
+#bluetext{
+	font-size:1em;
+    color: blue;
+    font-family: Times New Roman
+}
+#image05{
+	width:560px;
+    border: 8px solid #5c5243;
+}
+#greentext{
+    font-size:1em;
+    color: green;
+    font-family: Times New Roman
+}
